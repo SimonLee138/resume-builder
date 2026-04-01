@@ -16,10 +16,23 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
 
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      // ... rest of your navbar without the switch, or show a placeholder
+      <div id="top-navbar" className="sticky top-0 flex h-fit w-full p-3">
+        {/* your logo + nav + download button without switch */}
+      </div>
+    )
+  }
   return (
-    <div id="top-navbar" className="sticky top-0 flex h-fit w-full p-3">
+    <div id="top-navbar" className="sticky top-0 flex h-fit w-full p-3 bg-background border-b">
       <div className="pt-2 pr-2">
         <Image
           src="/MugPee-logo-transparent_horizon.png"
@@ -65,17 +78,19 @@ export default function Navbar() {
         </NavigationMenu>
       </div>
       <div className="grow-none flex items-center space-x-2">
-        <div className="flex space-x-2 items-center">
+        <div className="flex items-center space-x-2">
+          <Sun className="h-4 w-4" />
           <Switch
             id="dark-light-mode"
+            checked={resolvedTheme === "dark"}
             onCheckedChange={() =>
-              setTheme(theme === "dark" ? "light" : "dark")
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
           />
-          <Label htmlFor="dark-light-mode">Dark/Light Mode</Label>
+          <Moon className="h-4 w-4" />
         </div>
         <div>
-            <Button>Download</Button>
+          <Button>Download</Button>
         </div>
       </div>
     </div>

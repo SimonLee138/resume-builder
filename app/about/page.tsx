@@ -1,15 +1,13 @@
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import AnimatedBackground from "@/components/AnimatedBackground"
 
 export default function Page() {
 
   return (
-    <div className="min-h-svh justify-center p-6 relative">
-      <AnimatedBackground />
-      <div className="flex max-w-md min-w-0 min-w-[50svw] flex-col gap-4 text-sm leading-loose relative z-10">
+    <div className="min-h-svh justify-center p-6">
+      <div className="flex max-w-md min-w-0 min-w-[50svw] flex-col gap-4 text-sm leading-loose">
         <div>
-          <h1 className="font-medium">Project ready!</h1>
+          <h1 className="font-medium">ready!</h1>
           <p>You may now add components and start building.</p>
           <p>We&apos;ve already added the button component for you.</p>
           <Button className="mt-2">Button</Button>
