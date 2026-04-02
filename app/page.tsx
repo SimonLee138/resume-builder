@@ -1,8 +1,13 @@
+'use client'
+
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import AnimatedBackground from "@/components/AnimatedBackground"
+import Link from "next/link"
+import AIChatbot from "@/components/AIChatbot"
 
 export default function Page() {
+  const [showChatbot, setShowChatbot] = React.useState(false)
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
@@ -43,7 +48,8 @@ export default function Page() {
             <p className="text-sm text-muted-foreground">
               We've already added the button component for you.
             </p>
-            <Button className="mt-2">Button</Button>
+            <Button className="mt-2" onClick={() => setShowChatbot(!showChatbot)}>AI Chatbot</Button>
+            {showChatbot && <AIChatbot />}
           </div>
 
           {/* Dark mode hint */}

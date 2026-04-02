@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@openrouter/sdk':
+        specifier: ^0.10.2
+        version: 0.10.2
       '@tabler/icons-react':
         specifier: ^3.41.1
         version: 3.41.1(react@19.2.4)
@@ -606,6 +609,9 @@ packages:
 
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
+
+  '@openrouter/sdk@0.10.2':
+    resolution: {integrity: sha512-od0aWkk+vhndEI78YyPvPgMxv2+32KO4MRrk8lFxro/YABKAHkozXugc+x3YeNf/d9KQaBO6M4Rut1uf+yeD2g==}
 
   '@radix-ui/number@1.1.1':
     resolution: {integrity: sha512-MkKCwxlXTgz6CFoJx3pCwn07GKp36+aZyu/u2Ln2VrA5DcdyCZkASEDBTd8x5whTQQL5CiYf4prXKLcgQdv29g==}
@@ -4317,6 +4323,10 @@ snapshots:
       outvariant: 1.4.3
 
   '@open-draft/until@2.1.0': {}
+
+  '@openrouter/sdk@0.10.2':
+    dependencies:
+      zod: 4.3.6
 
   '@radix-ui/number@1.1.1': {}
 
