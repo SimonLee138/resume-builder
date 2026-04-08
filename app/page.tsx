@@ -10,7 +10,7 @@ export default function Page() {
   const [showChatbot, setShowChatbot] = React.useState(false)
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
+    <div className="min-h-full flex items-center justify-center p-4 sm:p-6 relative">
       <AnimatedBackground />
       <div className="w-full max-w-4xl mx-auto text-center relative z-10">
         <div className="space-y-6">

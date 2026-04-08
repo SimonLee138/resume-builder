@@ -43,7 +43,7 @@ export default function RootLayout({
         playfairDisplayHeading.variable
       )}
     >
-      <body>
+      <body className="min-h-screen flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -51,7 +51,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
