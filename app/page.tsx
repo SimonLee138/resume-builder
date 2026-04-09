@@ -29,8 +29,8 @@ export default function Page() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Button size="lg" className="w-full sm:w-auto">
-              View My Projects
+            <Button asChild size="lg" className="w-full sm:w-auto">
+              <Link href="/projects">View My Projects</Link>
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto">
               Download Resume

@@ -4,7 +4,6 @@ import {
   Code,
   Server,
   Database,
-  GitBranch,
   Monitor,
   Layers,
   Zap,
@@ -58,7 +57,7 @@ const skillCategories = [
 
 export default function Page() {
   return (
-    <div className="min-h-full p-6">
+    <div className="min-h-full py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
