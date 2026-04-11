@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
@@ -10,20 +10,25 @@ export default function Page() {
   const [showChatbot, setShowChatbot] = React.useState(false)
 
   return (
+<<<<<<< Updated upstream
     <div className="min-h-full flex items-center justify-center p-4 sm:p-6 relative">
+=======
+    <div className="relative flex min-h-screen items-center justify-center p-4 sm:p-6">
+>>>>>>> Stashed changes
       <AnimatedBackground />
-      <div className="w-full max-w-4xl mx-auto text-center relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
         <div className="space-y-6">
           {/* Hero Section */}
           <div className="space-y-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            <h1 className="text-2xl font-bold text-foreground sm:text-3xl md:text-4xl lg:text-5xl">
               Hi, I'm Simon Lee
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground sm:text-xl md:text-2xl">
               Full-Stack Developer | Building AI-powered experiences
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              A 5-year-old developer with a passion for creating innovative solutions. Learning AI integration with web technologies.
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              A 5-year-old developer with a passion for creating innovative
+              solutions. Learning AI integration with web technologies.
             </p>
           </div>
 
@@ -41,21 +46,26 @@ export default function Page() {
           </div>
 
           {/* Additional Info */}
-          <div className="pt-8 space-y-4">
+          <div className="space-y-4 pt-8">
             <p className="text-sm text-muted-foreground">
-              You may now add components and start building.
+              You may use the AI Resume Assistant to help you enhance your
+              resume and portfolio.
             </p>
-            <p className="text-sm text-muted-foreground">
-              We've already added the button component for you.
-            </p>
-            <Button className="mt-2" onClick={() => setShowChatbot(!showChatbot)}>AI Chatbot</Button>
+            <Button
+              className="mt-2"
+              onClick={() => setShowChatbot(!showChatbot)}
+            >
+              AI Resume Assistant
+            </Button>
             {showChatbot && <AIChatbot />}
           </div>
 
           {/* Dark mode hint */}
           <div className="pt-4">
             <p className="font-mono text-xs text-muted-foreground">
-              (Press <kbd className="px-1 py-0.5 bg-muted rounded text-xs">d</kbd> to toggle dark mode)
+              (Press{" "}
+              <kbd className="rounded bg-muted px-1 py-0.5 text-xs">d</kbd> to
+              toggle dark mode)
             </p>
           </div>
         </div>
