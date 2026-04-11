@@ -10,11 +10,7 @@ export default function Page() {
   const [showChatbot, setShowChatbot] = React.useState(false)
 
   return (
-<<<<<<< Updated upstream
-    <div className="min-h-full flex items-center justify-center p-4 sm:p-6 relative">
-=======
-    <div className="relative flex min-h-screen items-center justify-center p-4 sm:p-6">
->>>>>>> Stashed changes
+    <div className="relative flex min-h-full items-center justify-center p-4 sm:p-6">
       <AnimatedBackground />
       <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
         <div className="space-y-6">
@@ -33,7 +29,7 @@ export default function Page() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="/projects">View My Projects</Link>
             </Button>
